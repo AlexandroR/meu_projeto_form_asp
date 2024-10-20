@@ -1,0 +1,102 @@
+<color = black%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SolicitacaoMateriais.aspx.cs" Inherits="SeuProjeto.SolicitacaoMateriais" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Solicitação de Materiais</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center; /* Centraliza o título */
+            font-weight: bold;  /* Negrito para o título */
+            margin-bottom: 20px; /* Espaço abaixo do título */
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold; /* Negrito para os labels */
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 2px solid green; /* Borda verde de 2 pixels */
+            border-radius: 4px;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <h1>SOLICITAÇÃO DE MATERIAIS</h1> <!-- Título centralizado -->
+    <form id="form1" runat="server">
+        <div>
+            <label for="setor">Setor:</label>
+            <select id="setor" runat="server" required>
+                <option value="">Selecione um setor</option>
+                <option value="PA">PA</option>
+                <option value="UBS TIMBUI">UBS TIMBUI</option>
+                <option value="UBS SEDE">UBS SEDE</option>
+                <option value="UBS PRAIA GRANDE">UBS PRAIA GRANDE</option>
+                <option value="CAPS I">CAPS I</option>
+                <option value="SEMUS">SEMUS</option>
+                <option value="TRANSPORTE">TRANSPORTE</option>
+                <option value="ESPECIALIDADE">ESPECIALIDADE</option>
+            </select>
+
+            <label for="solicitante">Solicitante:</label>
+            <input type="text" id="solicitante" runat="server" required />
+
+            <label for="numeroPedido">Número do Pedido:</label>
+            <input type="text" id="numeroPedido" runat="server" required />
+
+            <label for="dataPedido">Data do Pedido:</label>
+            <input type="date" id="dataPedido" runat="server" required />
+
+            <label for="descricao">Descrição:</label>
+            <select id="descricao" runat="server" required>
+                <option value="">Selecione uma opção</option>
+                <option value="UN">UN</option>
+                <option value="CT">CT</option>
+                <option value="CX">CX</option>
+                <option value="DZ">DZ</option>
+                <option value="GS">GS</option>
+                <option value="PA">PA</option>
+                <option value="PÇ">PÇ</option>
+                <option value="PR">PR</option>
+                <option value="PT">PT</option>
+                <option value="RL">RL</option>
+                <option value="GL">GL</option>
+            </select>
+
+            <label for="unidade">Unidade:</label>
+            <input type="text" id="unidade" runat="server" required />
+
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" runat="server" required />
+
+            <button type="submit" runat="server" onserverclick="SubmitForm">Enviar Solicitação</button>
+        </div>
+    </form>
+</body>
+</html>
